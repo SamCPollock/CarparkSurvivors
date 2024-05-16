@@ -398,6 +398,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &109977921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 325541790472871322, guid: 42da337a9978fe14baf707415baa7fc5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1769571057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160066912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,28 +1942,14 @@ GameObject:
   - component: {fileID: 653127652}
   - component: {fileID: 653127651}
   - component: {fileID: 653127650}
-  - component: {fileID: 653127649}
+  - component: {fileID: 653127654}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: KillerOfSpecificGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &653127649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653127648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1952ab022a2104e418678304dc13e587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  currentSpeed: 360
 --- !u!65 &653127650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2044,6 +2036,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653127654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653127648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a72a1f331942ad4a8668f004850e04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thatSpecificGuy: {fileID: 109977921}
+  thatSpecificHammer: {fileID: 5781788366858690648}
 --- !u!1 &677710024
 GameObject:
   m_ObjectHideFlags: 0
@@ -6327,6 +6333,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5781788366858690648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6542809954323901722, guid: 002d9b11d020a304daa3164dd97059f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 7808644783440125703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1952ab022a2104e418678304dc13e587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &6041110696529034043
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6510,6 +6528,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 207556946888539092, guid: 002d9b11d020a304daa3164dd97059f0,
+        type: 3}
+      propertyPath: shotPrefab
+      value: 
+      objectReference: {fileID: 1300113082420848718, guid: 6f7980d473106d4429a294908840cdf0,
+        type: 3}
     - target: {fileID: 387552780075675230, guid: 002d9b11d020a304daa3164dd97059f0,
         type: 3}
       propertyPath: carSpeedText
@@ -6579,6 +6603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prometheus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055858012653862463, guid: 002d9b11d020a304daa3164dd97059f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
