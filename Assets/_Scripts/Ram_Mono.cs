@@ -6,26 +6,13 @@ public class Ram_Mono : MonoBehaviour
 {
     public int damage = 1;
     public float forceMagnitude = 10.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     
     private void OnTriggerEnter(Collider other)
     {
         Enemy_Mono collidedEnemy = other.GetComponent<Enemy_Mono>();
         if (collidedEnemy != null)
         {
-            other.GetComponent<Enemy_Mono>().TakeDamage(damage);
+            collidedEnemy.TakeDamage(damage);
         }
     }
 
